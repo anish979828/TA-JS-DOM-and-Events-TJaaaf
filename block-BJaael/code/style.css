@@ -33,3 +33,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* custom style  */
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  width: 4em;
+  height: 4em;
+}
