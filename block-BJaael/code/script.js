@@ -39,3 +39,7 @@ main.addEventListener("mousemove" ,colorMove)
 heading.addEventListener("mousemove" , changeRandomNumber(500))
 
 
+
+
+
+
