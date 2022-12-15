@@ -14,7 +14,7 @@ li.forEach((elm, index) => {
 //   With Event Deligation
 
 let ul = (document.querySelector(".second"))
-ul.addEventListener("click", (event) => {   
+ul.addEventListener("click", (event) => {
     if(!event.target.classList.contains('box')) return;
     event.target.innerText = event.target.id;
     setTimeout(() => {
