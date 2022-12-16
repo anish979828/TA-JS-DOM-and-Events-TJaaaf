@@ -1,10 +1,8 @@
-let box = document.querySelectorAll(".box")
+var box = document.querySelectorAll(".box")
 let display = document.querySelector(".display")
 let clear = document.querySelector(".clear")
 let eqaul = document.querySelector(".equal")
 const back= document.querySelector(".back")
-console.log(display)
-console.log(box)
 
 box.forEach(ele => ele.addEventListener("click", function(){
     display.innerText += ele.innerText
