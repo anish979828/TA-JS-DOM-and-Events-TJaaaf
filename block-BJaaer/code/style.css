@@ -52,6 +52,7 @@ button {
 }
 
 body {
+  position: relative;
   margin-top: 2rem;
 }
 
@@ -90,4 +91,28 @@ input[type='text'] {
 }
 .terms {
   display: inline-block;
+}
+
+
+.modal {
+    display: none;
+    position: absolute;
+    left: 29%;
+    bottom: 0%;
+    background-color: rgba(255, 255, 255);
+    z-index: 100;
+    width: 520px;
+    height: 550px;
+    padding: 50px;
+  }
+  .open {
+    display: inline-block;
+  }
+  .btn {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    background-color: tomato;
+    color: white;
+    font-weight: bold;
 }
