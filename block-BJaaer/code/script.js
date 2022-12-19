@@ -1,6 +1,7 @@
 let form = document.querySelector("form")
 let article = document.querySelector(".modal")
 let close = document.querySelector(".btn")
+let layout = document.querySelector(".output")
 
 let userInfo = {};
 
@@ -16,12 +17,17 @@ form.addEventListener("submit",function (event){
     userInfo.terms = form.elements.terms.value
     console.log(userInfo)
     article.classList.add("open")
+    layout.innerText = ""
+
     output(userInfo)
+
 
     close.addEventListener("click", function(){
         article.classList.remove("open")
     })
     console.log(userInfo)
+
+
   
 })
 
@@ -43,8 +49,9 @@ function output(userObject){
     if(userObject.terms == "on"){
         terms.innerText = " ✌️You agree to Terms and Conditions"
     }
+
   
-    let layout = document.querySelector(".output")
+    
     layout.append(h1,email,color,choice,range,book,terms)
 }
 
