@@ -49,6 +49,9 @@ table {
 
 
 /* main css  */
+body{
+    background-color:cornsilk;
+}
  .container{
     max-width: 50%;
     display: flex;
@@ -69,25 +72,30 @@ h1{
     font-style: italic;
     font-size: 1.5rem;
     border: none;
-    color: orange;
+    color: black;
     box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
 li{
   padding: 10px 50px;
-  color: orange;
+  color: black;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.3);
   border: none;
   font-size: 1.5rem;
-  font-weight: bold;
   width: 100%;
   cursor: pointer;
+}
+input{
+    cursor: pointer;
+
 }
 
 input[type=checkbox]:checked + label.strikethrough{
     text-decoration: line-through;
+    color:gray;
+  
   }
 
 li:hover span {
@@ -102,6 +110,9 @@ footer{
 }
 button{
     cursor: pointer;
+}
+button:hover{
+    background-color: coral;
 }
 .active{
     margin: 0px 5px;

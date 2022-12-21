@@ -69,6 +69,7 @@ function filterItem() {
 function handleClickActive(){
     const item = allTodo.filter(i => !i.isDone)
     createUI(item);
+    footerUI(); 
 }
 
 function handleClickAll(){
@@ -80,18 +81,11 @@ function handleClickCompleted(){
     createUI(item)
 }
 
-function handleClearCompleted(event){
-    var newArr = []
-    allTodo.forEach((item, index) => {
-        if(item.isDone) {
-            newArr.push(index)
-        }
-    })
-    console.log(newArr, 'checlllllll')
-    newArr.forEach(id => {
-        allTodo.splice(id, 1);
-    })
+function handleClearCompleted(){
+    var filteredArr = allTodo.filter(item => !item.isDone);
+    allTodo = [...filteredArr];
     createUI(allTodo);
+    footerUI();
 }
 
 
