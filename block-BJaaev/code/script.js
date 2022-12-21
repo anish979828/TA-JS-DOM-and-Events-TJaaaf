@@ -2,8 +2,7 @@ let display = document.querySelector(".display")
 let ul = document.querySelector("ul")
 console.log()
 
-let allTodo = [];
-
+let allTodo = localStorage.getItem('allTodo') ? JSON.parse(localStorage.getItem("allTodo")): [];
 
 
 // handleInput function 
@@ -14,6 +13,7 @@ function handleInput(event){
     createUI(allTodo);
     footerUI();
     event.target.value = "";
+    localStorage.setItem('allTodo',JSON.stringify(allTodo))
    }
 }
 // handleChange function \
@@ -21,6 +21,7 @@ function handleChange(event){
     let id = event.target.id;
     allTodo[id].isDone = !allTodo[id].isDone;
     createUI(allTodo);
+    localStorage.setItem('allTodo',JSON.stringify(allTodo))
     footerUI();
 }
 
@@ -29,6 +30,7 @@ function deleteTodo(event){
     var id = event.target.id;
     allTodo.splice(id, 1);
     createUI(allTodo);
+    localStorage.setItem('allTodo',JSON.stringify(allTodo))
     footerUI();
 }
 
@@ -65,7 +67,7 @@ function filterItem() {
     let array =  allTodo.filter(i => i.isDone == false);
     return array.length;
 }
-
+  
 function handleClickActive(){
     const item = allTodo.filter(i => !i.isDone)
     createUI(item);
@@ -85,6 +87,7 @@ function handleClearCompleted(){
     var filteredArr = allTodo.filter(item => !item.isDone);
     allTodo = [...filteredArr];
     createUI(allTodo);
+    localStorage.setItem('allTodo',JSON.stringify(allTodo))
     footerUI();
 }
 
