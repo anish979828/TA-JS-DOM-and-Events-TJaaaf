@@ -25,6 +25,8 @@ function createHouse(tags = []) {
         got.houses.find((house) => house.name === tag).people || [];
       createUI(peopleOfTheHouse);
       createHouse(allTags);
+      input.value = "";
+      console.log(input.value)
     });
     houses.append(span);
   });
@@ -69,6 +71,8 @@ function searchName(event){
    return people.name.toLowerCase().includes(search.toLowerCase());
   })
   createUI(filteredPeople);
+  activeHouse = "";
+  createHouse(allTags);
 }
 
 input.addEventListener("input" , searchName)
