@@ -12,7 +12,6 @@ function createHouse(tags = []) {
   tags.forEach((tag) => {
     let span = document.createElement("span");
     span.innerText = tag;
-    // span.style.background = "red";
 
     if (activeHouse === tag) {
       span.style.background = "white";
@@ -60,16 +59,16 @@ function createUI(data = allPeople) {
   });
 }
 
-function handleEvent(event) {
-  let searchName = event.target.value;
-  let filterdPeople = allPeople.filter((n) =>
-    n.name.toLowerCase().includes(searchName.toLowerCase())
-  );
-  createUI(filterdPeople);
-  console.log(filterdPeople);
-}
-
 createUI(allPeople);
 createHouse(allTags);
-input.addEventListener("input", handleEvent);
-//allHouse();
+
+// search input 
+function searchName(event){
+  let search = event.target.value;
+  let filteredPeople = allPeople.filter((people) =>{
+   return people.name.toLowerCase().includes(search.toLowerCase());
+  })
+  createUI(filteredPeople);
+}
+
+input.addEventListener("input" , searchName)
