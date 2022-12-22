@@ -1,8 +1,7 @@
 let display = document.querySelector(".display")
 let ul = document.querySelector("ul")
-console.log()
 
-let allTodo = localStorage.getItem('allTodo') ? JSON.parse(localStorage.getItem("allTodo")): [];
+let allTodo = JSON.parse(localStorage.getItem("allTodo")) || [];
 
 
 // handleInput function 
@@ -13,7 +12,7 @@ function handleInput(event){
     createUI(allTodo);
     footerUI();
     event.target.value = "";
-    localStorage.setItem('allTodo',JSON.stringify(allTodo))
+    localStorage.setItem('allTodo',JSON.stringify(allTodo));
    }
 }
 // handleChange function \
@@ -52,13 +51,14 @@ function createUI(data){
         label.classList.add('strikethrough');
         let span = document.createElement("span");
         span.innerText = "❌";
+        span.id = i;
         span.classList.add("delete");
         span.addEventListener("click",deleteTodo );
         li.append(input,label,span);
         ul.append(li);
     })
 }
-
+createUI(allTodo);
 // footerUI
 let footer = document.querySelector("footer")
 
