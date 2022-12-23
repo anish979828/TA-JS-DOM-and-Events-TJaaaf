@@ -1,0 +1,11 @@
+{
+    "name": "Linux commands",
+    "description": "Different commands for Linux",
+    "version": "1.0.0",
+    "author": "Abhishek",
+    "incognito": "spanning",
+    "manifest_version": 2,
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    }
+  }
