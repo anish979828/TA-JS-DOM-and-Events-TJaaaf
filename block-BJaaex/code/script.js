@@ -1,4 +1,4 @@
-let root = document.querySelector("ul");
+// let root = document.querySelector("ul");
 let cardsArr = [
   {
     name: "fish",
@@ -78,13 +78,10 @@ let grid = document.createElement("section");
 
 grid.classList.add("grid");
 game.appendChild(grid);
-cardsArr.sort(() => 0.5 - Math.random());
+cardsArr.sort(() => Math.random());
 
 cardsArr.forEach((elm) => {
   let card = document.createElement("div");
-  // let img = document.createElement("img");
-  // img.src = elm.img;
-  // card.append(img);
   card.classList.add("card");
   card.dataset.name = elm.name;
 
