@@ -3,16 +3,11 @@
 *::after {
   box-sizing: border-box;
 }
-/* .container {
-  max-width: 900px;
-  margin: 0 auto;
-} */
 body {
   margin: 20px 0;
   background-color: #b4c3f0;
   text-align: center;
 }
-
 .grid {
   margin-left: 20%;
   display: flex;
@@ -20,16 +15,6 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-/* 
-.card {
-  margin: 5px;
-  background-size: cover;
-  background: #abafbb;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 150px;
-  width: 150px;
-} */
 img {
   width: 50px;
   height: 50px;
